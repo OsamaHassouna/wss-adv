@@ -68,7 +68,7 @@
                         <div class="adv-hero__content">
                             <h1 class="adv-hero__title">ودّع التعقيد في إدارة الفواتير مع رصد الفوترة</h1>
                             <p class="adv-hero__desc">الحل الأمثل لإدارة فواتيرك الإلكترونية بسلاسةٍ تامة</p>
-                            <a href="#" class="adv-btn mb-12">اشترك الآن</a>
+                            <a class="adv-btn mb-12" onclick="trialTry()">اشترك الآن</a>
                             <p class="adv-hero__desc fs-18"> وجرب النظام مجانًا لمدة 10 أيام</p>
                         </div>
                     </div>
@@ -160,7 +160,7 @@
             </div>
         </section>
 
-        <section class="adv-register">
+        <section class="adv-register" id="register">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12 col-lg-7">
@@ -347,6 +347,9 @@
             const flag = document.getElementById('flag');
             const selectedOption = select.options[select.selectedIndex];
             flag.src = selectedOption.getAttribute('data-flag');
+        }
+        function trialTry() {
+            document.getElementById("register").scrollIntoView();
         }
     </script>
 </body>
