@@ -543,7 +543,7 @@ select.form-control {
   margin-bottom: 20px;
 }
 .adv-loading-content .loading-icon-wrapper svg {
-  height: 104px;
+  height: 64px;
   width: auto;
 }
 .adv-loading-content h1 {
@@ -629,3 +629,75 @@ select.form-control {
   border-inline-end: 0;
 }
 /*=============*/
+/* svg animation */
+/* Circle animation remains as you defined it */
+@keyframes scaleCircle {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1.025);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes drawLine2 {
+  0%,
+  30% {
+    stroke-dashoffset: 100;
+    opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  95% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes drawLine1 {
+  0%,
+  36.67% {
+    stroke-dashoffset: 100;
+    opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  95% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#circle {
+  transform-origin: center;
+  animation: scaleCircle 3s ease-in-out infinite;
+}
+#line2,
+#line1 {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+#line2 {
+  animation: drawLine2 3s ease-in-out infinite;
+}
+#line1 {
+  animation: drawLine1 3s ease-in-out infinite;
+}
